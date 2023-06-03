@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MP3 Player</title>
+    <link rel="stylesheet" href="acsset/style.css">
+    <link rel="stylesheet" href="acsset/singer.css">
+    <link rel="stylesheet" href="acsset/reponsive.css">
+    <link rel="stylesheet" href="acsset/help.css">
+    <script src="Javascript/struct.js"></script>
+    <script src="Javascript/data.js"></script>
+    <script src="Javascript/data-singer.js"></script>
+    <link rel="preconn ect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="http ://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,600;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="acsset/themify-icons-font/themify-icons/themify-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alkatra&family=League+Spartan&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <a class="login" href="login.html"><button id="login">Log in</button></a>
+        <div class="dropdown">
+            <a id="user" class="user"><i class="ti-user"></i><span id="nameuser">Admin</span></a>
+            <div class="dropdown-content">
+                <button id="logout">Log out</button>
+            </div>
+        </div>
+        <a class="signup" id="signup" href="signup.html">Sign up</a>
+        <p>|</p>
+        <a class="help" href="">Help</a>
+        <a class="dowload" href="download.html">Dowload</a>
+        <a class="premium" href="premium.html">Premium</a>
+
+        <div class="dialog overlay" id="my-dialog">
+            <a href="#" class="overlay-close"></a>
+            <div class="dialog-body">
+                <a class="dialog-close-btn" href="#">&times;</a>
+                <a class="search-btn" href="#">&#9906;</a>
+                <input id="search" type="text" placeholder=" What do you want to hear?">
+            </div>
+        </div>
+        <div class="repon-header">
+            <div class="repon-logo">
+                <img src="acsset/img/Brown cute illustrated Podcast logo.png" alt="">
+                <label for="nav-input"><i class="ti-menu"></i></label>
+                <input type="checkbox" class="nav-input" id="nav-input">
+                <label for="nav-input" class="repon-overlay"></label>
+                <!-- <a class="repon-dialog-btn" href="#repon-my-dialog"><i class="ti-search" style="margin: 0;float: left; margin-right: 280px;margin-top: 13px;"></i></a> -->
+                <div class="repon-dialog overlay" id="repon-my-dialog">
+                    <a class="repon-overlay-close"></a>
+                    <div class="repon-dialog-body">
+                        <a class="repon-dialog-close-btn" href="#">&times;</a>
+                        <input id="repon-search" type="text" placeholder=" What do you want to hear?">
+                    </div>
+                </div>
+                <div class="repon-nav">
+                    <nav class="navigation">
+                        <label for="nav-input" class="repon-close">
+                            <i class="ti-close"></i>
+                        </label>
+
+                        <ul id="ul-nav">
+                            <li id="loginres"><a href="login.html">Log in</a></li>
+                            <li id="signupres"><a href="signup.html">Sign up</a></li>
+                            <li style="display: none;" id="userres"><a><i class="ti-user"></i><span id="mameuserres"
+                                        style="margin: 0;padding: 0;">Admin</span></a></li><br>
+                            <hr style="margin-top: 20px;">
+                            <li style="cursor: pointer; display: none;" id="logout1">Log out</li>
+                            <li><a href="">Help</a></li>
+                            <li><a href="download.html">Download</a></li>
+                            <li><a href="premium.html">Premium</a></li>
+                            <li><a href="">Privacy</a></li>
+                            <li><a href="">Terms</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+    </header>
+    <aside class="sidebar">
+        <div class="logo">
+            <img src="acsset/img/Brown cute illustrated Podcast logo.png" alt=""><br>
+            <div class="home">
+                <a href="index.html"><i class="ti-home"></i> Home</a>
+            </div>
+            <div class="search">
+                <a class="dialog-btn" href="#my-dialog"><i class="ti-search"></i> Search</a>
+            </div>
+            <div class="heart">
+                <a href="list.html"><i class="ti-heart"></i> Favorite</a>
+            </div>
+            <div class="playlist">
+                <a href="list-create.html"><i class="ti-music-alt"></i>Create Playlist</a>
+            </div>
+            <div class="app">
+                <a href="download.html"><i class="ti-download"></i>Download App</a>
+            </div>
+        </div>
+        <div class="repon-logo">
+            <a href="index.html"><i class="ti-home"></i></a>
+            <a class="dialog-btn" href="#my-dialog"><i class="ti-search"></i> </a>
+            <a href="list.html"><i class="ti-heart"></i> </a>
+            <a href="list-create.html"><i class="ti-music-alt"></i></a>
+            <a href=""><i class="ti-download"></i></a>
+        </div>
+        <div class="rules">
+            <a href="">Lepal</a>
+            <a href="">Privacy Center</a><br><br>
+            <a href="">Privacy Policy</a>
+            <a href="">Cookies</a><br><br>
+            <a href="">About ads</a>
+        </div>
+    </aside>
+    <main class="main helpmain" id="main">
+        <div class="helptitle">
+            <h3>MFU Support</h3>
+            <h1>How can I help you</h1>
+        </div>
+        <iframe id="hidden_iframe" name="hidden_iframe"
+            onload="if(submitted){window.location='index.html';alert('Gửi hỗ trợ thành công');}"
+            style="display: none;"></iframe>
+        <div class="contact">
+            <div class="support">
+                <form onsubmit="submitted=true;" target="hidden_iframe" class="text-left" role="form" id="ss-form"
+                    method="GET"
+                    action="https://script.google.com/macros/s/AKfycbwWM8EdhBM4aEx3Gwj5118BJdfvn3wL7fvtZD1kSImileBfWI_4IBKgqwmshpFxA9Jr/exec">
+                    <label for="">Select the issue you are in need of assistance: </label><br>
+                    <select id="" name="issue" required>
+                        <option>Select the issue to contact</option>
+                        <option value="Error">Error</option>
+                        <option value="Product Comments">Product Comments</option>
+                        <option value="Content release">Content release</option>
+                        <option value="Content Coopperation">Content Coopperation</option>
+                        <option value="User account">User account</option>
+                        <option value="Other Problem">Other Problem</option>
+                    </select>
+                    <br>
+                    <label for="">Content: </label><br>
+                    <textarea name="content" cols="30" rows="10" id="help-content"
+                        placeholder="Enter the text you need help with"></textarea>
+                    <br>
+                    <label for="">Your name: </label><br>
+                    <input type="text" name="name" id="name"><br>
+                    <label for="">Email:</label><br>
+                    <input type="text" id="email" name="email" placeholder="Your phone number or email" required><br>
+                    <input type="submit" class="submit">
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,125 @@
+.lyrics-of-singer{
+    background:linear-gradient(180deg,rgb(32, 50, 61),rgb(0, 0, 0),rgb(0, 0, 0),rgb(0, 0, 0),rgb(0, 0, 0),rgb(0, 0, 0),rgb(0, 0, 0));
+    height: 5000px;
+}
+#lyrics-banner{
+    height: 400px;
+    background:linear-gradient(180deg,rgb(197, 243, 255),rgb(44, 99, 109),rgb(7, 63, 73));
+}
+.name-discs{
+    color: white;
+    float: left;
+    margin-top: 6%;
+    margin-left: 3%;
+    /* font-size: 200% */
+    width: 90%;
+    display: flex;
+}
+.music-name{
+    margin-left: 5%;
+}
+.music-name h1{
+    float: right;
+    font-size: 600%;
+    display: inline;
+    margin-bottom: 4%;
+    margin-top: 2%;
+    text-shadow: 15px 15px 15px rgb(0, 0, 0);
+}
+.listen a{
+    text-decoration: none;
+    margin-left: 4%;
+}
+/* .playlist-of-singer .listen .ti-heart{
+    font-size: 250%;
+    ma
+} */
+.song-img{
+    height: 250px;
+    box-shadow: 30px 30px 30px rgb(0, 0, 0);
+    display: inline;
+}
+.artist img{
+    border-radius: 50%;
+}
+.artist a{
+    color: white;
+    text-decoration: none;
+}
+.artist1 a,.artist1 i{
+    color: white;
+    text-decoration: none;
+    margin-left: 7%;
+}
+.artist1{
+    margin-right: 18%;
+    margin-top: 5%;
+    /* display: flex; */
+    width: 20%;
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.artist1 img{
+    height:100px;
+    border-radius: 50%;
+}
+h2{
+    color: white;
+    font-size: 200%;
+    margin-left: 3%;
+    width: 10%;
+    /* float: left  ; */
+}
+.lyrics{
+    margin-left: 4%;
+    margin-top: 10px;
+}
+.lyrics p{
+    color: rgb(220, 226, 226);
+    font-size: 120%;
+}
+.lyrics-foot{
+    margin-top: 4%;
+    margin-left: 4%;
+}
+#playlist-banner{
+    height: 400px;
+    background: url('/acsset/img/playlistbg.jpg') ;
+}
+.add-song{
+    width: 120px;
+    height: 46px;
+    background-color: aliceblue;
+    margin-top: 5em;
+    border-radius: 20px;
+    margin-left: 3em;
+    margin-bottom: 2em;
+}
+.add-song a{
+    line-height: 46px;
+    margin-left: 15px;
+}
+h3.tieu-de
+{
+  color: white;
+  margin: 0;
+  padding: 0;
+  font-size: 23px;
+  font-weight: normal;
+  font-family: 'Oswald', sans-serif;
+}
+/*list*/
+.list-listen{
+    display: flex;
+    align-items: center;
+  }
+  .list-listen h3{
+    margin-left: 40px;
+    font-size: 30px;
+  }
+  .favorite-name{
+    margin-left: 0;
+    /* margin-top: 80px; */
+  }

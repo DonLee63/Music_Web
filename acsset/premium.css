@@ -1,0 +1,516 @@
+main #pre {
+    background-color: #f399d8;
+    width: 1379px;
+    float: left;
+    padding-left: 8%;
+    padding-right: 9%;
+    padding-bottom: 5%;
+    height: 600px;
+}
+
+main #pre2 {
+    background-color: #ffffff;
+    width: 1379px;
+    float: left;
+    padding-top: 60px;
+    padding-left: 8%;
+    padding-right: 9%;
+    padding-bottom: 5%;
+    height: 600px;
+}
+
+main #pre3 {
+    background-color: #141414;
+    width: 1379px;
+    float: left;
+    padding-top: 60px;
+    padding-left: 8%;
+    padding-right: 9%;
+    padding-bottom: 5%;
+    height: 800px;
+}
+
+#pre-1-1 {
+    width: 740px;
+    height: 500px;
+    background-color: #f399d8;
+    float: left;
+    margin-top: 80px;
+}
+
+#pre-1-1-1 {
+    float: left;
+    font-size: 85px;
+}
+
+#pre-1-1-2 {
+    font-size: 40px;
+}
+
+#pre-1-1-3 {
+    font-size: 35px;
+    line-height: 45px;
+}
+
+#pre-1-1-4 {
+    float: left;
+    padding: 15px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 50px;
+    font-size: 25px;
+    cursor: pointer;
+    background-color: beige;
+    margin-bottom: 20px;
+}
+
+#pre-1-1-4:hover {
+    background-color: black;
+    color: white;
+    scale: 1.1;
+}
+
+#pre a {
+    text-decoration: none;
+    color: black;
+}
+
+#pre a:hover {
+    color: white;
+}
+
+#pre-1-1-5 {
+    float: left;
+    padding: 15px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 50px;
+    font-size: 25px;
+    cursor: pointer;
+    background-color: beige;
+    margin-left: 15px;
+    margin-right: 300px;
+    margin-bottom: 20px;
+}
+
+#pre-1-1-5:hover {
+    background-color: black;
+    color: white;
+    scale: 1.1;
+}
+
+#month-input {
+    font-size: 22px;
+    color: #333;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    background-color: beige;
+    padding: 5px;
+    padding: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#month-input:focus {
+    outline: none;
+    border-bottom-color: #4CAF50;
+}
+
+#pre-1-1-6 {
+    background-color: beige;
+    padding: 15px;
+    padding-top: 20px;
+    border-radius: 100px;
+    text-align: center;
+}
+
+.dropdown-1 {
+    margin-top: 20px;
+}
+
+#pre-1-1-7 {
+    font-size: 25px;
+    margin-left: 18px
+}
+
+#pre-1-2 {
+    float: right;
+    width: 500px;
+    margin: 50px;
+    margin-top: 100px;
+    border-radius: 25px;
+}
+
+#pre-2-1 {
+    font-size: 60px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#pre-2-2 {
+    width: 458px;
+    height: 600px;
+    float: left;
+}
+
+#pre-2-2-1 {
+    border-radius: 50%;
+    width: 270px;
+    height: 270px;
+    object-fit: cover;
+    border: 50px black;
+    box-shadow: 0px 0px 7px 7px;
+    text-align: center;
+    margin-left: 21%;
+}
+
+#pre-2-2-2 {
+    font-size: 40px;
+    text-align: center;
+}
+
+#pre-2-2-3 {
+    font-size: 30px;
+    text-align: justify;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#pre-3-1 {
+    color: white;
+    font-size: 60px;
+}
+
+#pre-3-2-a:hover {
+    box-shadow: 0 0 7px 7px white;
+    scale: 1.05;
+}
+
+#pre-3-2-b:hover {
+    box-shadow: 0 0 7px 7px white;
+    scale: 1.05;
+}
+
+#pre-3-2-c:hover {
+    box-shadow: 0 0 7px 7px white;
+    scale: 1.05;
+}
+
+#pre-3-2-a {
+    width: 330px;
+    height: 600px;
+    float: left;
+    padding-left: 35px;
+    padding-right: 35px;
+    margin-right: 57px;
+    background-color: rgb(230, 209, 224);
+}
+
+#pre-3-2-b {
+    width: 330px;
+    height: 600px;
+    float: left;
+    padding-left: 35px;
+    padding-right: 35px;
+    margin-right: 57px;
+    background-color: rgb(214, 209, 230);
+}
+
+#pre-3-2-c {
+    width: 330px;
+    height: 600px;
+    float: left;
+    padding-left: 35px;
+    padding-right: 35px;
+    margin-right: 57px;
+    background-color: rgb(216, 230, 209);
+}
+
+#pre-a-1 {
+    text-align: center;
+    font-size: 40px;
+}
+
+#pre-a-2 {
+    text-align: center;
+    font-size: 33px;
+}
+
+#pre-a-3 {
+    font-size: 33px;
+    text-align: center;
+    padding: 15px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: azure;
+}
+
+#pre-a-4 {
+    font-size: 25px;
+}
+#music-song{
+    padding-left: 0px;
+}
+
+@media screen and (max-width:900px) {
+    main #pre {
+        background-color: #f399d8;
+        width: 400px;
+        float: left;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 0;
+        height: 900px;
+        display: block;
+    }
+    
+    main #pre2 {
+        background-color: #ffffff;
+        width: 430px;
+        float: left;
+        padding-top: 0;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+        height: auto;
+        display: block;
+    }
+    
+    main #pre3 {
+        background-color: #141414;
+        width: 430px;
+        float: left;
+        padding-top: 0;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+        height: auto;
+        display: block;
+    }
+    
+    #pre-1-1 {
+        width: auto;
+        height: 400px;
+        background-color: #f399d8;
+        float: left;
+        margin-top: 35px;
+    }
+    
+    #pre-1-1-1 {
+        float: none;
+        font-size: 45px;
+    }
+    
+    #pre-1-1-2 {
+        font-size: 24px;
+    }
+    
+    #pre-1-1-3 {
+        font-size: 22px;
+        line-height: 30px;
+        float: left;
+    }
+    
+    #pre-1-1-4 {
+        float: left;
+        padding: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 50px;
+        font-size: 25px;
+        cursor: pointer;
+        background-color: beige;
+        margin-bottom: 20px;
+    }
+    
+    #pre-1-1-4:hover {
+        background-color: black;
+        color: white;
+        scale: 1.1;
+    }
+    
+    #pre a {
+        text-decoration: none;
+        color: black;
+    }
+    
+    #pre a:hover {
+        color: white;
+    }
+    
+    #pre-1-1-5 {
+        float: left;
+        padding: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 50px;
+        font-size: 25px;
+        cursor: pointer;
+        background-color: beige;
+        margin-left: 15px;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    #pre-1-1-5:hover {
+        background-color: black;
+        color: white;
+        scale: 1.1;
+    }
+    
+    #month-input {
+        font-size: 20px;
+        color: #333;
+        border: none;
+        border-bottom: 2px solid #ccc;
+        background-color: beige;
+        padding: 5px;
+        padding: 10px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    
+    #month-input:focus {
+        outline: none;
+        border-bottom-color: #4CAF50;
+    }
+    
+    #pre-1-1-6 {
+        background-color: beige;
+        padding: 10px;
+        padding-top: 20px;
+        border-radius: 100px;
+        text-align: center;
+    }
+    
+    .dropdown-1 {
+        margin-top: 20px;
+    }
+    
+    #pre-1-1-7 {
+        font-size: 20px;
+        margin-left: 18px;
+    }
+    
+    #pre-1-2 {
+        float: left;
+        width: 395px;
+        margin: 0;
+        border-radius: 25px;
+    }
+    
+    #pre-2-1 {
+        font-size: 30px;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    
+    #pre-2-2 {
+        width: 458px;
+        height: auto;
+        float: left;
+    }
+    
+    #pre-2-2-1 {
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border: 50px black;
+        box-shadow: 0px 0px 7px 7px;
+        text-align: center;
+        margin-left: 25%;
+    }
+    
+    #pre-2-2-2 {
+        font-size: 28px;
+        text-align: center;
+    }
+    
+    #pre-2-2-3 {
+        font-size: 25px;
+        text-align: justify;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    
+    #pre-3-1 {
+        color: white;
+        font-size: 30px;
+    }
+    
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    
+    #pre-3-1 ::-webkit-scrollbar {
+        height: 0;
+    }
+    
+    #pre-3-2-a {
+        width: 330px;
+        height: auto;
+        float: left;
+        background-color: rgb(230, 209, 224);
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-right: 15px;
+    }
+    
+    #pre-3-2-b {
+        width: 330px;
+        height: auto;
+        float: left;
+        background-color: rgb(214, 209, 230);
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-right: 15px;
+    }
+    
+    #pre-3-2-c {
+        width: 330px;
+        height: auto;
+        float: left;
+        background-color: rgb(216, 230, 209);
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-right: 15px;
+    }
+    
+    #pre-3-2-a:hover {
+        box-shadow: 0 0 7px 7px white;
+        scale: 1.02;
+    }
+    
+    #pre-3-2-b:hover {
+        box-shadow: 0 0 7px 7px white;
+        scale: 1.02;
+    }
+    
+    #pre-3-2-c:hover {
+        box-shadow: 0 0 7px 7px white;
+        scale: 1.02;
+    }
+    
+    #music-song,
+    #popular-singer {
+        margin-left: 15px;
+        margin-right: 15px;
+        overflow-x: auto;
+        display: flex;
+    }
+    
+    #pre-a-1 {
+        text-align: center;
+        font-size: 40px;
+    }
+    #pre-a-2 {
+        text-align: center;font-size: 33px;
+    }
+    #pre-a-3 {
+        font-size: 33px; text-align: center; padding: 15px; padding-left: 95px; padding-right: 95px; background-color: azure;
+    }
+    #pre-a-4{
+        font-size: 25px;
+    }    
+}    

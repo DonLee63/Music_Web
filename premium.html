@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MP3 Player</title>
+    <link rel="stylesheet" href="acsset/premium.css">
+    <link rel="stylesheet" href="acsset/style.css">
+    <link rel="stylesheet" href="acsset/reponsive.css">
+    <script src="Javascript/struct.js"></script>
+    <script src="Javascript/data.js"></script>
+    <script src="Javascript/premium.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="http ://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,600;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="acsset/themify-icons-font/themify-icons/themify-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alkatra&family=League+Spartan&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <a class="login" href="login.html"><button id="login">Log in</button></a>
+        <div class="dropdown">
+            <a id="user" class="user"><i class="ti-user"></i><span id="nameuser">Admin</span></a>
+            <div class="dropdown-content">
+              <button id="logout">Log out</button>
+            </div>
+          </div>
+        <a class="signup" id="signup" href="signup.html">Sign up</a>
+        <p>|</p>
+        <a class="help" href="">Help</a>
+        <a class="dowload" href="download.html">Download</a>
+        <a class="premium" href="premium.html">Premium</a>
+
+        <div class="dialog overlay" id="my-dialog">
+            <a class="overlay-close"></a>
+            <div class="dialog-body">
+                <a class="dialog-close-btn" href="#">&times;</a>
+                <a class="search-btn" href="#">&#9906;</a>
+                <input id="search" type="text" placeholder=" What do you want to hear?">
+            </div>
+        </div>
+        <div class="repon-header">
+            <div class="repon-logo singer-reponlogo">
+                <a href="index.html"><img src="acsset/img/Brown cute illustrated Podcast logo.png" alt=""></a>
+                <label for="nav-input"><i class="ti-menu"></i></label>
+                <input type="checkbox" class="nav-input" id="nav-input">
+                <label for="nav-input" class="repon-overlay"></label>
+                <!-- <a class="repon-dialog-btn" href="#repon-my-dialog"><i class="ti-search" style="margin: 0;float: left; margin-right: 280px;margin-top: 13px;"></i></a> -->
+                <div class="repon-dialog overlay" id="repon-my-dialog">
+                    <a class="repon-overlay-close"></a>
+                    <div class="repon-dialog-body">
+                        <a class="repon-dialog-close-btn" href="#">&times;</a>
+                        <input id="repon-search" type="text" placeholder=" What do you want to hear?">
+                    </div>
+                </div>
+                <div class="repon-nav">
+                    <nav class="navigation">
+                        <label for="nav-input" class="repon-close">
+                            <i class="ti-close"></i>
+                        </label>
+
+                        <ul id="ul-nav">
+                            <li id="loginres"><a href="login.html">Log in</a></li>
+                            <li id="signupres"><a href="signup.html">Sign up</a></li>
+                            <li style="display: none;" id="userres"><a><i class="ti-user"></i><span id="mameuserres"
+                                        style="margin: 0;padding: 0;">Admin</span></a></li><br>
+                            <hr style="margin-top: 20px;">
+                            <li style="cursor: pointer; display: none;" id="logout1">Log out</li>
+                            <li><a href="">Help</a></li>
+                            <li><a href="download.html">Download</a></li>
+                            <li><a href="premium.html">Premium</a></li>
+                            <li><a href="">Privacy</a></li>
+                            <li><a href="">Terms</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+    </header>
+    <aside class="sidebar">
+        <div class="logo">
+            <a href="index.html"><img src="acsset/img/Brown cute illustrated Podcast logo.png" alt=""></a><br>
+            <div class="home">
+                <a href="index.html"><i class="ti-home"></i>Home</a>
+            </div>
+            <div class="search">
+                <a class="dialog-btn" href="#my-dialog"><i class="ti-search"></i> Search</a>
+            </div>
+            <div class="heart">
+                <a href="list.html"><i class="ti-heart"></i> Favorite</a>
+            </div>
+            <div class="playlist">
+                <a href="list-create.html"><i class="ti-music-alt"></i>Playlist</a>
+            </div>
+            <div class="app">
+                <a href="download.html"><i class="ti-download"></i>Download</a>
+            </div>
+        </div>
+        <div class="repon-logo">
+            <a href="index.html"><i class="ti-home"></i></a>
+            <a class="dialog-btn" href="#my-dialog"><i class="ti-search"></i> </a>
+            <a href="list.html"><i class="ti-heart"></i> </a>
+            <a href="list-create.html"><i class="ti-music-alt"></i></a>
+            <a href="download.html"><i class="ti-download"></i></a>
+        </div>
+        <div class="rules">
+            <a href="">Lepal</a>
+            <a href="">Privacy Center</a><br><br>
+            <a href="">Privacy Policy</a>
+            <a href="">Cookies</a><br><br>
+            <a href="">About ads</a>
+        </div>
+    </aside>
+    <main class="main" style="margin-top: 50px;">
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////// V- POP -->
+        <div id="popup-container">
+            <div id="popup">
+                Bạn đã đăng ký gói Premium 3 tháng thành công.
+            </div>
+        </div>
+        <div id="pre">
+            <div id="pre-1-1">
+                <h1 id="pre-1-1-1">Đăng ký gói Premium</h1>
+                <h2 id="pre-1-1-2">Dùng 3 tháng Premium với giá 59,000₫.</h2>
+                <h3 id="pre-1-1-3">Nghe nhạc thả ga. Tải những bản nhạc chất lượng cao kho
+                    nhạc của Music For You.</h3>
+                <span><div id="pre-1-1-4">
+                    Mua gói</div>
+                <div id="pre-1-1-5">
+                    Xem các gói</div>
+                <a id="xemgoi" href="#pre3"></a></span>
+                <span id="pre-1-1-6" class="dropdown-1">
+                    <select name="speed-input" id="month-input" placeholder="1 tháng">
+                        <option value="3">3 tháng</option>
+                        <option value="1">1 tháng</option>
+                        <option value="12">1 năm</option>
+                    </select>
+                </span>
+                <span id="pre-1-1-7">
+                    Giá tiền : <b id="giatien">59.000vnđ</b>
+                </span>
+                <script>
+                    const giatien = document.getElementById('month-input');
+                    // Lắng nghe sự kiện change của thanh kéo
+                    giatien.addEventListener('change', () => {
+                        const giatienpremium = giatien.value;
+                        if (giatienpremium == 12) {
+                            document.getElementById('giatien').innerHTML = "189.000vnđ";
+                        }
+                        else {
+                            if (giatienpremium == 1) {
+                                document.getElementById('giatien').innerHTML = "19.000vnđ";
+                            }
+                            else {
+                                document.getElementById('giatien').innerHTML = "59.000vnđ";
+                            }
+                        }
+                    });
+                </script>
+            </div>
+            <div>
+                <img src="acsset/img/Brown cute illustrated Podcast logo.png" alt="" id="pre-1-2">
+            </div>
+        </div>
+        <div id="pre2">
+            <h1 id="pre-2-1">Lý do nên sử dụng gói Premium
+            </h1>
+            <div id="pre-2-2">
+                <img id="pre-2-2-1" src="acsset/img/premium/download.jpg" alt="">
+                <h2 id="pre-2-2-2">Tải nhạc</h2>
+                <p id="pre-2-2-3">Tải nhạc xuống trên các thiết bị của bạn.</p>
+            </div>
+            <div id="pre-2-2">
+                <img src="acsset/img/premium/43672475.jpg" alt="" id="pre-2-2-1">
+                <h2 id="pre-2-2-2">Tạo danh sách nhạc</h2>
+                <p id="pre-2-2-3">Cho phép tạo các danh sách nhạc theo ý thích của mình cũng như tuỳ chỉnh thứ tự tuỳ ý.
+                </p>
+            </div>
+            <div id="pre-2-2">
+                <img src="acsset/img/premium/24171544.jpg" alt="" id="pre-2-2-1">
+                <h2 id="pre-2-2-2">Kho nhạc</h2>
+                <p id="pre-2-2-3">Mở ra kho nhạc chất lượng cao và không giới hạn cho bạn khám phá.</p>
+            </div>
+        </div>
+        <div id="pre3">
+            <h1 id="pre-3-1">Các gói Premium giành cho bạn</h1>
+            <ul id="music-song">
+            <div id="pre-3-2-a">
+                <h2 id="pre-a-1">Gói cơ bản</h2>
+                <h2 id="pre-a-2">1 tháng</h2>
+                <h3 id="pre-a-3">
+                    19.000vnđ</h3>
+                <ul id="pre-a-4" >
+                    <li>Tải nhạc xuống trên các thiết bị của bạn.</li>
+                    <li>Cho phép tạo các danh sách nhạc theo ý thích của mình cũng như tuỳ chỉnh thứ tự tuỳ ý.</li>
+                    <li>Mở ra kho nhạc chất lượng cao và không giới hạn cho bạn khám phá.</li>
+                </ul>
+            </div>
+            <div id="pre-3-2-b">
+                <h2 id="pre-a-1" >Gói tiêu chuẩn</h2>
+                <h2 id="pre-a-2">3 tháng</h2>
+                <h3 id="pre-a-3"> 49.000vnđ</h3>
+                <ul id="pre-a-4">
+                    <li>Tải nhạc xuống trên các thiết bị của bạn.</li>
+                    <li>Tạo playlist cá nhân và sắp xếp theo thứ tự ưa thích để nghe thoải mái.</li>
+                    <li>Khám phá kho nhạc chất lượng cao và đa dạng với hàng triệu bài hát.</li>
+                    <li>Gợi ý nhạc mới, các ca sĩ nổi tiếng và album hot nhất hiện nay.</li>
+                </ul>
+            </div>
+            <div id="pre-3-2-c">
+                <h2 id="pre-a-1">Gói cao cấp</h2>
+                <h2 id="pre-a-2">1 năm</h2>
+                <h3 id="pre-a-3">
+                    189.000vnđ</h3>
+                <ul id="pre-a-4">
+                    <li>Tải nhạc xuống trên các thiết bị của bạn.</li>
+                    <li>Tạo playlist cá nhân và sắp xếp theo thứ tự ưa thích để nghe thoải mái.</li>
+                    <li>Khám phá kho nhạc chất lượng cao và đa dạng với rất nhiều bài hát.</li>
+                    <li>Gợi ý nhạc mới, các ca sĩ nổi tiếng và album hot nhất hiện nay.</li>
+                </ul>
+            </div>
+            </ul>
+        </div>
+        <hr class="repon-hr">
+        <footer class="footer">S
+            <div class="foot1">
+                <h3>Company</h3>
+                <a href="">About</a><br><br>
+                <a href="">Jobs</a><br><br>
+                <a href="">For the Record</a>
+            </div>
+            <div class="foot2">
+                <h3>Communities</h3>
+                <a href="">For Artists</a><br><br>
+                <a href="">Developers</a><br><br>
+                <a href="">Advertising</a><br><br>
+                <a href="">Investors</a><br><br>
+                <a href="">Vendors</a>
+            </div>
+            <div class="foot3">
+                <h3>Useful links</h3>
+                <a href="">Support</a><br><br>
+                <a href="">Free Mobile App</a>
+            </div>
+        </footer>
+        <div class="contact">
+            <div class="facebook"> <a href=""><i class="ti-facebook"></i></a></div>
+            <div class="insta"><a href=""><i class="ti-instagram"></i></a></div>
+            <div class="twitter"><a href=""><i class="ti-twitter"></i></a></div>
+        </div>
+    </main>
+</body>
+
+</html>

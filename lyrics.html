@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MP3 Player</title>
+    <link rel="stylesheet" href="acsset/style.css">
+    <link rel="stylesheet" href="acsset/singer.css">
+    <link rel="stylesheet" href="acsset/lyrics.css">
+    <link rel="stylesheet" href="acsset/reponsive.css">
+    <script src="Javascript/struct.js"></script>
+    <script src="Javascript/data.js"></script>
+    <script src="Javascript/lyric.js"></script>
+    <script src="Javascript/main.js"></script>
+    <link rel="preconn ect" href="https://fonts.googleapis.com">
+    <!-- <link rel="preconnect" href="http ://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,600;1,400&display=swap"
+        rel="stylesheet"> -->
+    <link rel="stylesheet" href="acsset/themify-icons-font/themify-icons/themify-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alkatra&family=League+Spartan&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a class="login" href="login.html"><button id="login">Log in</button></a>
+        <div class="dropdown">
+            <a id="user" class="user"><i class="ti-user"></i><span id="nameuser">Admin</span></a>
+            <div class="dropdown-content">
+                <button id="logout">Log out</button>
+            </div>
+        </div>
+        <a class="user" id="user"><i class="ti-user"></i><span id="nameuser">Admin</span></a>
+        <a class="signup" id="signup" href="signup.html">Sign up</a>
+        <p>|</p>
+        <a class="help" href="">Help</a>
+        <a class="dowload" href="download.html">Dowload</a>
+        <a class="premium" href="premium.html">Premium</a>
+
+        <div class="dialog overlay" id="my-dialog">
+            <a href="#" class="overlay-close"></a>
+            <div class="dialog-body">
+                <a class="dialog-close-btn" href="#">&times;</a>
+                <a class="search-btn" href="#">&#9906;</a>
+                <input id="search" type="text" placeholder=" What do you want to hear?">
+            </div>
+        </div>
+        <div class="repon-header">
+            <div class="repon-logo singer-reponlogo">
+                <a href="index.html"><img src="acsset/img/Brown cute illustrated Podcast logo.png" alt=""></a>
+                <label for="nav-input"><i class="ti-menu"></i></label>
+                <input type="checkbox" class="nav-input" id="nav-input">
+                <label for="nav-input" class="repon-overlay"></label>
+                <!-- <a class="repon-dialog-btn" href="#repon-my-dialog"><i class="ti-search" style="margin: 0;float: left; margin-right: 280px;margin-top: 13px;"></i></a> -->
+                <div class="repon-dialog overlay" id="repon-my-dialog">
+                    <a class="repon-overlay-close"></a>
+                    <div class="repon-dialog-body">
+                        <a class="repon-dialog-close-btn" href="#">&times;</a>
+                       <input id="repon-search" type="text" placeholder=" What do you want to hear?">
+                    </div>
+            </div>
+            <div class="repon-nav">
+                <nav class="navigation">
+                    <label for="nav-input" class="repon-close">
+                        <i class="ti-close"></i>
+                    </label>
+                    
+                    <ul id="ul-nav"> 
+                        <li id="loginres"><a href="login.html" >Log in</a></li>
+                        <li id="signupres"><a href="signup.html" >Sign up</a></li>
+                        <li  style="display: none;" id="userres"><a ><i class="ti-user"></i><span id="mameuserres" style="margin: 0;padding: 0;">Admin</span></a></li><br>
+                        <hr style="margin-top: 20px;">
+                        <li style="cursor: pointer; display: none;" id="logout1">Log out</li>
+                        <li><a href="">Help</a></li>
+                        <li><a href="download.html">Download</a></li>
+                        <li><a href="premium.html">Premium</a></li>
+                        <li><a href="">Privacy</a></li>
+                        <li><a href="">Terms</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <aside class="sidebar">
+        <div class="logo">
+            <img src="acsset/img/Brown cute illustrated Podcast logo.png" alt=""><br>
+            <div class="home">
+                <a href="index.html"><i class="ti-home"></i> Home</a>
+            </div>
+            <div class="search">
+                <a class="dialog-btn" href="#my-dialog"><i class="ti-search"></i> Search</a>
+            </div>
+            <div class="heart">
+                <a href="list.html"><i class="ti-heart"></i> Favorite</a>
+            </div>
+            <div class="playlist">
+                <a href="list-create.html"><i class="ti-music-alt"></i>Create Playlist</a>
+            </div>
+            <div class="app">
+                <a href="download.html"><i class="ti-download"></i>Download App</a>
+            </div>
+        </div>
+        <div class="repon-logo">
+            <a href="index.html"><i class="ti-home"></i></a>
+            <a class="dialog-btn" href="#my-dialog"><i class="ti-search"></i> </a>
+            <a href="list.html"><i class="ti-heart"></i> </a>
+            <a href="list-create.html"><i class="ti-music-alt"></i></a>
+            <a href=""><i class="ti-download"></i></a>
+    </div>
+        <div class="rules">
+            <a href="">Lepal</a>
+            <a href="">Privacy Center</a><br><br>
+            <a href="">Privacy Policy</a>
+            <a href="">Cookies</a><br><br>
+            <a href="">About ads</a>
+        </div>
+    </aside>
+    <main class="main lyrics-main">
+        <div id="lyrics-banner">
+            <div class="name-discs">
+                <img class="song-img" src="acsset/img/V-POP/chungtacuahientai.jpg" alt="">
+                <div class="music-name">
+                    <h1>Chúng ta của hiện tại</h1>
+                    <div class="artist">
+                        <img src="acsset/img/Artist/M-TP.jpg" height="40px" alt="">
+                        <i><a href="">Sơn Tùng MTP</a> ▪ 2020 ▪ 5:01 </i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="lyrics-of-singer">
+            <div class="listen">
+                <button id="s0" class="hear"><i class="ti-headphone"></i></button>
+                <a><i class="ti-heart ti-heart1" id="ti-heart" style="margin: 0;float: right; margin-right: 85%;margin-top: 1.3em;"></i></a>
+                <div class="artist1">
+                    <img src="acsset/img/Artist/M-TP.jpg" height="40px" alt="">
+                    <i><a href="">Artist<br><br> Sơn Tùng MTP
+                        </a></i>
+                </div>
+            </div>
+            <h2>Lyrics</h2>
+            <div class="lyrics">
+                <p>(Good boy) </p>
+                <p>Mùa thu mang giấc mơ quay về </p>
+                <p>Vẫn nguyên vẹn như hôm nào </p>
+                <p>Lá bay theo gió xôn xao </p>
+                <p>Chốn xưa em chờ </p>
+                <p>Đoạn đường ngày nào nơi ta từng đón đưa </p>
+                <p>Còn vấn vương không phai mờ </p>
+                <p>Giấu yêu thương trong vần thơ </p>
+                <p>Chúng ta... </p>
+                <p>Là áng mây bên trời vội vàng ngang qua </p>
+                <p>Chúng ta... </p>
+                <p>Chẳng thể nâng niu những câu thề </p>
+                <p>Cứ như vậy thôi, không một lời, lặng lẽ thế chia xa </p>
+                <p>Chiều mưa bên hiên vắng buồn, </p>
+                <p>Còn ai thương ai, mong ai? </p>
+                <p>Điều anh luôn giữ kín trong tim </p>
+                <p>Thương em đôi mắt ướt nhòa </p>
+                <p>Điều anh luôn giữ kín trong tim này </p>
+                <p>Thương em đâu đó khóc òa </p>
+                <p>Điều anh luôn giữ kín trong tim này </p>
+                <p>Ngày mai nắng gió, sương hao gầy </p>
+                <p>Có ai thương, lắng lo cho em? </p>
+                <p>(Whoo-whoo-whoo) </p>
+                <p>Điều anh luôn giữ kín trong tim </p>
+                <p>Thương em, anh mãi xin là </p>
+                <p>Điều anh luôn giữ kín trong tim này </p>
+                <p>Thương em vì thương thôi mà </p>
+                <p>Điều anh luôn giữ kín trong tim này </p>
+                <p>Dù cho nắng tắt, xuân thay màu </p>
+                <p>Héo khô đi tháng năm xưa kia </p>
+                <p>(Anh nguyện ghi mãi trong tim) </p>
+                <p>"Nắng vương trên cành héo khô những kỉ niệm xưa kia </p>
+                <p>Ngày mai, người luyến lưu về giấc mơ từng có, liệu có ta?" </p>
+                <p>Có anh nơi đó không? </p>
+                <p>Có anh nơi đó không? </p>
+                <p>(Liệu có ta?) </p>
+                <p>Chúng ta... </p>
+                <p>Là áng mây bên trời vội vàng ngang qua </p>
+                <p>Chúng ta... </p>
+                <p>Chẳng thể nâng niu những câu thề </p>
+                <p>Cứ như vậy thôi, không một lời, lặng lẽ thế chia xa </p>
+                <p>Chiều mưa bên hiên vắng buồn, </p>
+                <p>Còn ai thương ai, mong ai? </p>
+                <p>Điều anh luôn giữ kín trong tim </p>
+                <p>Thương em đôi mắt ướt nhòa </p>
+                <p>Điều anh luôn giữ kín trong tim này </p>
+                <p>Thương em đâu đó khóc òa </p>
+                <p>Điều anh luôn giữ kín trong tim này </p>
+                <p>Ngày mai nắng gió, sương hao gầy </p>
+                <p>Có ai thương, lắng lo cho em? </p>
+                <p>(Whoo-whoo-whoo) </p>
+                <p>Điều anh luôn giữ kín trong tim </p>
+                <p>Thương em, anh mãi xin là </p>
+                <p>Điều anh luôn giữ kín trong tim này </p>
+                <p>Thương em vì thương thôi mà </p>
+                <p>Điều anh luôn giữ kín trong tim này </p>
+                <p>Dù cho nắng tắt, xuân thay màu </p>
+                <p>Héo khô đi tháng năm xưa kia </p>
+                <p>(Anh nguyện ghi mãi trong tim) ♪</p>
+                <p> No, no, no </p>
+                No, no, no ♪
+
+                <p>Điều anh luôn giữ kín trong tim (Giữ kín trong tim này) </p>
+                <p>Giữ mãi trong tim này (Giữ mãi trong tim này) </p>
+                <p>Giữ mãi trong tim mình (Giữ mãi trong tim mìn...) </p>
+                <p>Có anh nơi đó không? </p>
+                <p>Có anh nơi đó không? </p>
+                <p>(Whoo-whoo-whoo-whoo) </p>
+                <p>Điều anh luôn giữ kín trong tim (No, No) </p>
+                <p>Điều anh luôn giữ kín trong tim này (No, No) </p>
+                <p>Điều anh luôn giữ kín trong tim này </p>
+                <p>(Ngày mai, nắng gió, sương hao gầy) </p>
+                <p>(Có ai thương, lắng lo cho em?) </p>
+                <p>Điều anh luôn giữ kín trong tim (No, No) </p>
+                <p>Điều anh luôn giữ kín trong tim này (No, No) </p>
+                <p>Điều anh luôn giữ kín trong tim này </p>
+                <p>(Dù cho nắng tắt, xuân thay màu) </p>
+                <p>(Héo khô đi tháng năm xưa kia) </p>
+                <p>(Anh nguyện ghi mãi trong tim) </p>
+                <p>Điều anh luôn giữ kín trong tim </p>
+                <p>Thương em đôi mắt ướt nhòa </p>
+                <p>Điều anh luôn giữ kín trong tim này </p>
+                <p>Thương em đâu đó khóc òa </p>
+                <p>Điều anh luôn giữ kín trong tim này </p>
+                <p>Ngày mai nắng gió, sương hao gầy </p>
+                <p>Có ai thương, lắng lo cho em? </p>
+                <p>(Whoo-whoo-whoo) </p>
+                <p>Điều anh luôn giữ kín trong tim </p>
+                <p>Thương em, anh mãi xin là </p>
+                <p>Điều anh luôn giữ kín trong tim này </p>
+                <p>Thương em vì thương thôi mà </p>
+                <p>Điều anh luôn giữ kín trong tim này </p>
+                <p>Dù cho nắng tắt, xuân thay màu </p>
+                <p>Héo khô đi tháng năm xưa kia </p>
+                <p>(Anh nguyện ghi mãi trong tim) </p>
+                <p>(Anh nguyện ghi mãi trong tim) </p>
+                <p>(Anh nguyện ghi mãi trong tim)</p>
+                <p>♪ </p>
+                <p>(Anh nguyện ghi mãi trong tim) </p>
+                (Anh nguyện ghi mãi trong tim)
+                </p>
+            </div>
+            <div id="popular-song">
+                <h1>Other trending songs</h1>
+                <ul id="discs">
+                    <section class="singer-section" id="s33" >
+                        <li><a href="lyrics.html"><img src="acsset/img/V-POP/chungtacuahientai.jpg" alt=""></a></li>
+                        <a>Chúng ta của hiện tại</a><br><br>
+                        <a class="singer">2020 - Đĩa đơn</a><br>
+                    </section>
+                    <section class="singer-section" id="s34">
+                        <li><a><img src="acsset/img/V-POP/chungtakhongthuocvenhau.jpg" alt=""></a></li>
+                        <a>Chúng ta không thuộc về...</a><br><br>
+                        <a class="singer">2016 - Đĩa đơn</a><br>
+                    </section>
+                    <section class="singer-section" id="s35">
+                        <li><a><img src="acsset/img/V-POP/haytraochoanh.jpg" alt=""></a></li>
+                        <a>Hãy trao cho anh</a><br><br>
+                        <a class="singer">2019 - Đĩa đơn</a><br>
+                    </section>
+                    <section class="singer-section" id="s36">
+                        <li><a><img src="acsset/img/V-POP/muonroimasaocon.jpg" alt=""></a></li>
+                        <a>Muộn rồi mà sao con</a><br><br>
+                        <a class="singer">2021 - Đĩa đơn</a><br>
+                    </section>
+                    <section class="singer-section" id="s37">
+                        <li><a><img src="acsset/img/V-POP/therearenooneatall.jpg" alt=""></a></li>
+                        <a>There’s no one at all</a><br><br>
+                        <a class="singer">2022 - Đĩa đơn</a><br>
+                    </section>
+                    <section class="singer-section" id="s38">
+                        <li><a><img src="acsset/img/V-POP/buongdoitaynhaura.jpg" alt=""></a></li>
+                        <a>Buông đôi tay nhau ra</a><br><br>
+                        <a class="singer">2015 - Đĩa đơn</a><br>
+                    </section>
+                    <section class="singer-section" id="s39">
+                        <li><a><img src="acsset/img/V-POP/amthambenem.jpg" alt=""></a>
+                        </li>
+                        <a>Âm thầm bên em</a><br><br>
+                        <a class="singer">2015 - Đĩa đơn</a><br>
+                    </section>
+                    <div class="more1"><a href="">More</a></div>
+                </ul>
+            </div>
+            <footer class="footer">
+                <div class="foot1">
+                    <h3>Company</h3>
+                    <a href="">About</a><br><br>
+                    <a href="">Jobs</a><br><br>
+                    <a href="">For the Record</a>
+                </div>
+                <div class="foot2">
+                    <h3>Communities</h3>
+                    <a href="">For Artists</a><br><br>
+                    <a href="">Developers</a><br><br>
+                    <a href="">Investors</a><br><br>
+                </div>
+                <div class="foot3">
+                    <h3>Contact</h3>
+                    <a href="">🏠 BMT 567 Le Duan </a><br><br>
+                    <a href="">✉ musicforu@gmail.com </a><br><br>
+                    <a href="">📞 +0357 566 489</a>
+                </div>
+                <div class="music-player">
+                    <div id="player">
+                        <div id="mp3-layer">
+                            <img class="musicwave" src="acsset/img/Musicwave.gif" alt="">
+                            <img src="acsset/img/V-POP/chungtacuahientai.jpg" alt="" class="anh-tieu-de"
+                                id="anh-tieu-de">
+                            <h3 class="tieu-de" id="tieude">Chúng ta của hiện tại</h2>
+                            <p id="tacgia">Sơn Tùng MTP</p>
+                        </div>
+                        <div id="mp3-layer1">
+                            <div id="mp3-layer1-2">
+                                <button id="previous"><i class="ti-control-skip-backward"></i></button>
+                                <button id="backward-btn"><i class="ti-control-backward"></i></button>
+                                <button id="play-button"><i id="play-pause-img" class="ti-control-pause"></i></button>
+                                <button id="foward-btn"><i class="ti-control-forward"></i></button>
+                                <button id="next"><i class="ti-control-skip-forward"></i></button>
+                            <i class="ti-heart repon-heart" id="ti-heart" style="font-size: 100%; margin-right: 40px;"></i>
+                            </div>
+                            <div id="mp3-layer1-3">
+                                <div id="progress-bar-container">
+                                    <div id="progress-bar">
+                                        <div></div><span id="time-display"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="mp3-layer2">
+                            <i class="ti-heart" id="ti-heart1"></i>
+                            <label for="speed-input" style="color: white;">Tốc độ:</label>
+                            <select name="speed-input" id="speed-input" placeholder="speed">
+                                <option value="1">1</option>
+                                <option value="0.5">0,5</option>
+                                <option value="0.75">0,75</option>
+                                <option value="1.25">1,25</option>
+                                <option value="1.5">1,5</option>
+                                <option value="2">2</option>
+                            </select>
+                            <br>
+                            <label id="" for="volume-slider" style="color: white;"><i class="ti-volume"></i> </label>
+                            <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="1">
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- <hr> -->
+            <div class="lyrics-foot">
+                <p><a href="" style="font-size: 80%;text-decoration: none;color: rgb(167, 167, 167);margin: 0;">© 2020
+                        M-TP Entertainment Ltd</a></p>
+                <p style="font-size: 80%;text-decoration: none;color: rgb(167, 167, 167);margin: 0;">Lyrics powered by
+                    Musixmatch.</p>
+            </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng ký</title>
+  <link rel="stylesheet" href="acsset/signup.css">
+  <link rel="stylesheet" href="acsset/reponsive.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alkatra&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="acsset/themify-icons-font/themify-icons/themify-icons.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alkatra&family=League+Spartan&display=swap" rel="stylesheet">
+  <script src="Javascript/struct.js">
+  </script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body style="font-family: Arial, Helvetica, sans-serif;">
+  <div class="wrapper">
+    <div class="container">
+      <main class="main signup-main">
+        <div class="signform">
+          <iframe id="hidden_iframe" name="hidden_iframe"
+            onload="if(submitted){window.location='index.html';alert('Đăng ký thành công');}"
+            style="display: none;"></iframe>
+          <form onsubmit="submitted=true;" target="hidden_iframe" class="text-left" role="form" id="ss-form"
+            method="GET"
+            action="https://script.google.com/macros/s/AKfycbx_UUVQ-Sp_X-xjZ-ggGW_Z4NKtS18JpxNABUDQmo8RVAhUVQcjgH9cVQYVZpSgGQf3zw/exec">
+            <div class="register">
+              <img src="acsset/img/signup-removebg-preview.png" class="bg-image" alt="" height="500px">
+              <h2>Music For You!!!</h2>
+              <button name="submit" type="submit" class="signupface"><i class="ti-facebook"></i> <span>Sign up with
+                  Facebook</span></button><br>
+              <button name="submit" type="submit" class="signupgg"><i class="ti-google"></i> <span>Sign up with
+                  Google</span></button><br>
+              <label for="gender">What's your name?</label><br><br>
+              <input type="text" id="ten" name="First name" placeholder="First name" required>
+              <input type="text" id="ho" name="Last name" placeholder="Last name" required><br>
+              <label for="gender">What's your date of birth?</label><br><br>
+              <select id="day" name="day" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="10">19</option>
+                <option value="11">20</option>
+                <option value="12">21</option>
+                <option value="13">22</option>
+                <option value="14">23</option>
+                <option value="15">24</option>
+                <option value="16">25</option>
+                <option value="17">26</option>
+                <option value="18">27</option>
+                <option value="14">28</option>
+                <option value="15">29</option>
+                <option value="16">30</option>
+                <option value="17">31</option>
+              </select>
+              <select id="month" name="month" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+              </select>
+              <select id="year" name="year" required>
+                <option value="1999">1999</option>
+                <option value="2000">2000</option>
+                <option value="2001">2001</option>
+                <option value="2002">2002</option>
+                <option value="2003">2003</option>
+                <option value="2004">2004</option>
+                <option value="2005">2005</option>
+                <option value="2006">2006</option>
+                <option value="2007">2007</option>
+                <option value="2008">2008</option>
+                <option value="2009">2009</option>
+                <option value="2010">2010</option>
+                <option value="2011">2011</option>
+                <option value="2012">2012</option>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+              </select><br><br>
+              <label for="">What's your gender? </label><br><br>
+              <fieldset>
+                <input type="radio" name="gender" id="male" value="Nam" readonly>Male
+              </fieldset>
+              <fieldset>
+                <input type="radio" name="gender" id="female" value="Nữ" required>Female
+              </fieldset>
+              <fieldset>
+                <input type="radio" name="gender" id="choose" value="Order" required>Other
+              </fieldset><br><br>
+              <label for="gender">What should we call you?</label><br>
+              <input type="text" id="email" name="email" placeholder="Your phone number or email" required><br>
+              <label for="gender">Create a password</label><br>
+              <input type="password" id="password" name="password" placeholder="password" required>
+              <p class="provacy">By clicking on sign-up, you agree to <a href=""> MFU's Terms and Conditions of
+                  Use.</a><br> To learn more about how Spotify collects, uses, shares and protects your <br> personal
+                data, please see <a href=""> MFU's Privacy Policy.</a></p><br>
+              <a id="fogotpw" href="login.html">I have an account ✔</a><br>
+              <input required type="text" id="check" style="display: none;">
+              <button name="submit" type="submit" class="button" id="submit">Sign Up</button>
+            </div>
+          </form>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+<script>
+  let user = Array();
+  $(document).ready(function () {
+    $.getJSON("https://script.google.com/macros/s/AKfycbxkwzs9usTVM5EUVk_x2JFLaxubPTx8IdwnROVfDEC8jndeuxDbRn2GWz7Yb47q9wcJ7g/exec", function (data) {
+      $.each(data, function (index, row) {
+        user.push(row['email']);
+      });
+    });
+  });
+  document.getElementById('submit').addEventListener("click", function () {
+    if (validateForm()) {
+      saveData();
+      document.getElementById('check').value = "true";
+    }
+  });
+  function validateForm() {
+    // Lấy giá trị từ các trường input
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    // Kiểm tra dữ liệu và trả về false nếu không hợp lệ
+    if (!isValidEmail(email)) {
+      alert('Please enter a valid email address or valid a telephone number.')
+      return false;
+    }
+
+    if (!isValidPassword(password)) {
+      alert('Password must be at least 8 characters long and contain at least one letter and one number.')
+      return false;
+    }
+    if (checkuser()) { }
+    else {
+      alert('This email or phone number is already in use.');
+      return false;
+    }
+    // Nếu dữ liệu hợp lệ, trả về true để cho phép form được gửi đi
+    return true;
+  }
+
+  function isValidEmail(email) {
+    const emailRegEx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const phoneRegEx = /^\d{10}$/; // Kiểm tra xem số điện thoại có phải là 10 chữ số không
+    return emailRegEx.test(email) || phoneRegEx.test(email);
+  }
+  function isValidPassword(password) {
+    const passwordRegEx = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+    return passwordRegEx.test(password);
+  }
+
+  function checkuser() {
+    if (user.indexOf(document.getElementById('email').value) == -1) {
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
+  function saveData() {
+    let login = 1;
+    let check = 0;
+    let tempt = document.getElementById('ten').value + " " + document.getElementById('ho').value;
+    SharedData.setItem("login-data", JSON.stringify({ login: login }));
+    SharedData.setItem("name-user", JSON.stringify({ name: tempt }));
+    SharedData.setItem("premium", JSON.stringify({ check: check }));
+  }
+</script>
+
+</html>

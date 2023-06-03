@@ -1,0 +1,1450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MP3 Player</title>
+    <link rel="stylesheet" href="acsset/style.css">
+    <link rel="stylesheet" href="acsset/singer.css">
+    <link rel="stylesheet" href="acsset/lyrics.css">
+    <link rel="stylesheet" href="acsset/reponsive.css">
+    <script src="Javascript/struct.js"></script>
+    <script src="Javascript/data.js"></script>
+    <script src="Javascript/list-create.js"></script>
+    <link rel="preconn ect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="http ://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,600;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="acsset/themify-icons-font/themify-icons/themify-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alkatra&family=League+Spartan&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <a class="login" href="login.html"><button id="login">Log in</button></a>
+        <div class="dropdown">
+            <a id="user" class="user"><i class="ti-user"></i><span id="nameuser">Admin</span></a>
+            <div class="dropdown-content">
+                <button id="logout">Log out</button>
+            </div>
+        </div>
+        <a class="signup" id="signup" href="signup.html">Sign up</a>
+        <p>|</p>
+        <a class="help" href="">Help</a>
+        <a class="dowload" href="download.html">Dowload</a>
+        <a class="premium" href="premium.html">Premium</a>
+
+        <div class="dialog overlay" id="my-dialog">
+            <a class="overlay-close"></a>
+            <div class="dialog-body">
+                <a class="dialog-close-btn" href="#">&times;</a>
+                <a class="search-btn" href="#">&#9906;</a>
+                <input id="search" type="text" placeholder=" What do you want to hear?">
+            </div>
+        </div>
+        <div class="repon-header">
+            <div class="repon-logo singer-reponlogo">
+                <img src="acsset/img/Brown cute illustrated Podcast logo.png" alt="">
+                <label for="nav-input"><i class="ti-menu"></i></label>
+                <input type="checkbox" class="nav-input" id="nav-input">
+                <label for="nav-input" class="repon-overlay"></label>
+                <!-- <a class="repon-dialog-btn" href="#repon-my-dialog"><i class="ti-search" style="margin: 0;float: left; margin-right: 280px;margin-top: 13px;"></i></a> -->
+                <div class="repon-dialog overlay" id="repon-my-dialog">
+                    <a class="repon-overlay-close"></a>
+                    <div class="repon-dialog-body">
+                        <a class="repon-dialog-close-btn" href="#">&times;</a>
+                        <input id="repon-search" type="text" placeholder=" What do you want to hear?">
+                    </div>
+                </div>
+                <div class="repon-nav">
+                    <nav class="navigation">
+                        <label for="nav-input" class="repon-close">
+                            <i class="ti-close"></i>
+                        </label>
+                        <ul id="ul-nav">
+                            <li id="loginres"><a href="login.html">Log in</a></li>
+                            <li id="signupres"><a href="signup.html">Sign up</a></li>
+                            <li style="display: none;" id="userres"><a><i class="ti-user"></i><span id="mameuserres"
+                                        style="margin: 0;padding: 0;">Admin</span></a></li><br>
+                            <hr style="margin-top: 20px;">
+                            <li style="cursor: pointer; display: none;" id="logout1">Log out</li>
+                            <li><a href="">Help</a></li>
+                            <li><a href="download.html">Download</a></li>
+                            <li><a href="premium.html">Premium</a></li>
+                            <li><a href="">Privacy</a></li>
+                            <li><a href="">Terms</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+    </header>
+    <aside class="sidebar">
+        <div class="logo">
+            <img src="acsset/img/Brown cute illustrated Podcast logo.png" alt=""><br>
+            <div class="home">
+                <a href="index.html"><i class="ti-home"></i> Home</a>
+            </div>
+            <div class="search">
+                <a class="dialog-btn" href="#my-dialog"><i class="ti-search"></i> Search</a>
+            </div>
+            <div class="heart">
+                <a href="list.html"><i class="ti-heart"></i> Favorite</a>
+            </div>
+            <div class="playlist">
+                <a href="list-create.html"><i class="ti-music-alt"></i>Create Playlist</a>
+            </div>
+            <div class="app">
+                <a href="download.html"><i class="ti-download"></i>Download</a>
+            </div>
+        </div>
+        <div class="repon-logo">
+            <a href="index.html"><i class="ti-home"></i></a>
+            <a class="dialog-btn" href="#my-dialog"><i class="ti-search"></i> </a>
+            <a href="list.html"><i class="ti-heart"></i> </a>
+            <a href="list-create.html"><i class="ti-music-alt"></i></a>
+            <a href=""><i class="ti-download"></i></a>
+        </div>
+        <div class="rules">
+            <a href="">Lepal</a>
+            <a href="">Privacy Center</a><br><br>
+            <a href="">Privacy Policy</a>
+            <a href="">Cookies</a><br><br>
+            <a href="">About ads</a>
+        </div>
+    </aside>
+    <main class="main">
+        <div class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>Bạn chưa đăng ký tài khoản Premium</p>
+                <a href="premium.html">Đăng ký ngay</a>
+            </div>
+        </div>
+        <div id="playlist-banner" style="   
+        background: url('acsset/img/playlistbg.jpg') ;">
+            <div class="name-discs">
+                <img class="song-img" src="acsset/img/playlist.jpg" alt="">
+                <div class="music-name">
+                    <h1>My Playlist</h1>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="add-song" id="thembai" style="cursor: pointer;"><a id="thembaimoi">Add new song</a></div>
+            <ul id="music-song1">
+                <div id="pop-2"></div>
+            </ul>
+        </div>
+        <!-- //////////////////////////////////////////////////////////////////////////////////////////////// V- POP -->
+        <h1 style="color: aliceblue;margin-left: 20px;" id="yeucau">Suggest</h1>
+        <div id="pop-3">
+            <div class="popular-music1" id="s1">
+                <div class="song">
+                    <i class="ti-music-alt ti-music-alt1"></i>
+                    <img src="acsset/img/V-POP/chungtacuahientai.jpg" alt="">
+                    <div class="name-song">
+                        <p>Chúng ta của hiện tại</p>
+                    </div>
+                    <div class="view">
+                        <p>235.078.320</p>
+                    </div>
+                    <div class="time-song">
+                        <p>5:01</p>
+                    </div>
+                    <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="popular-music1" id="s2">
+                <div class="song">
+                    <i class="ti-music-alt ti-music-alt1"></i>
+                    <img src="acsset/img/V-POP/muonnoivoiem.jpg" alt="">
+                    <div class="name-song">
+                        <p>Muốn nói với em</p>
+                    </div>
+                    <div class="view">
+                        <p>125.078.320</p>
+                    </div>
+                    <div class="time-song">
+                        <p>3:53</p>
+                    </div>
+                    <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="popular-music1" id="s3">
+                <div class="song">
+                    <i class="ti-music-alt ti-music-alt1"></i>
+                    <img src="acsset/img/V-POP/thangdien.jpg" alt="">
+                    <div class="name-song">
+                        <p>Thằng điên</p>
+                    </div>
+                    <div class="view">
+                        <p>266.078.320</p>
+                    </div>
+                    <div class="time-song">
+                        <p>4:23</p>
+                    </div>
+                    <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="popular-music1" id="s4">
+                <div class="song">
+                    <i class="ti-music-alt ti-music-alt1"></i>
+                    <img src="acsset/img/V-POP/cochacyeuladay.jpg" alt="">
+                    <div class="name-song">
+                        <p>Có chắc yêu là đây</p>
+                    </div>
+                    <div class="view">
+                        <p>235.078.320</p>
+                    </div>
+                    <div class="time-song">
+                        <p>3:22</p>
+                    </div>
+                    <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="popular-music1" id="s5">
+                <div class="song">
+                    <i class="ti-music-alt ti-music-alt1"></i>
+                    <img src="acsset/img/V-POP/3107.jpg" alt="">
+                    <div class="name-song">
+                        <p>3107</p>
+                    </div>
+                    <div class="view">
+                        <p>301.078.320</p>
+                    </div>
+                    <div class="time-song">
+                        <p>4:05</p>
+                    </div>
+                    <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="popular-music1" id="s6">
+                <div class="song">
+                    <i class="ti-music-alt ti-music-alt1"></i>
+                    <img src="acsset/img/V-POP/bainaychillphet.jpg" alt="">
+                    <div class="name-song">
+                        <p>Bài này chill phết</p>
+                    </div>
+                    <div class="view">
+                        <p>235.078.320</p>
+                    </div>
+                    <div class="time-song">
+                        <p>3:22</p>
+                    </div>
+                    <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="popular-music1" id="s7">
+                <div class="song">
+                    <i class="ti-music-alt ti-music-alt1"></i>
+                    <img src="acsset/img/V-POP/hoanokhongmau.jpg" alt="">
+                    <div class="name-song">
+                        <p>Hoa nở không màu</p>
+                    </div>
+                    <div class="view">
+                        <p>125.078.320</p>
+                    </div>
+                    <div class="time-song">
+                        <p>3:53</p>
+                    </div>
+                    <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="popular-music1" id="s8">
+                <div class="song">
+                    <i class="ti-music-alt ti-music-alt1"></i>
+                    <img src="acsset/img/V-POP/honanh.jpg" alt="">
+                    <div class="name-song">
+                        <p>Hôn anh</p>
+                    </div>
+                    <div class="view">
+                        <p>125.078.320</p>
+                    </div>
+                    <div class="time-song">
+                        <p>3:53</p>
+                    </div>
+                    <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="popular-music1" id="s9">
+                <div class="song">
+                    <i class="ti-music-alt ti-music-alt1"></i>
+                    <img src="acsset/img/V-POP/1-trieu-like.png" alt="">
+                    <div class="name-song">
+                        <p>Một triệu like</p>
+                    </div>
+                    <div class="view">
+                        <p>235.078.320</p>
+                    </div>
+                    <div class="time-song">
+                        <p>3:22</p>
+                    </div>
+                    <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="popular-music1" id="s10">
+                <div class="song">
+                    <i class="ti-music-alt ti-music-alt1"></i>
+                    <img src="acsset/img/V-POP/yeu1nguoicole.jpg" alt="">
+                    <div class="name-song">
+                        <p>Yêu một người có lẽ</p>
+                    </div>
+                    <div class="view">
+                        <p>125.078.320</p>
+                    </div>
+                    <div class="time-song">
+                        <p>3:53</p>
+                    </div>
+                    <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="popular-music1" id="s11">
+                <div class="song">
+                    <i class="ti-music-alt ti-music-alt1"></i>
+                    <img src="acsset/img/V-POP/anhnhaodauthe.jpg" alt="">
+                    <div class="name-song">
+                        <p>Anh nhà ở đâu thế</p>
+                    </div>
+                    <div class="view">
+                        <p>266.078.320</p>
+                    </div>
+                    <div class="time-song">
+                        <p>4:23</p>
+                    </div>
+                    <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="popular-music1" id="s12">
+                <div class="song">
+                    <i class="ti-music-alt ti-music-alt1"></i>
+                    <img src="acsset/img/V-POP/muonruoutotinh.jpg" alt="">
+                    <div class="name-song">
+                        <p>Mượn rượu tỏ tình</p>
+                    </div>
+                    <div class="view">
+                        <p>301.078.320</p>
+                    </div>
+                    <div class="time-song">
+                        <p>4:05</p>
+                    </div>
+                    <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="popular-music1" id="s13">
+                <div class="song">
+                    <i class="ti-music-alt ti-music-alt1"></i>
+                    <img src="acsset/img/V-POP/nguoiamphu.jpg" alt="">
+                    <div class="name-song">
+                        <p>Người âm phủ</p>
+                    </div>
+                    <div class="view">
+                        <p>235.078.320</p>
+                    </div>
+                    <div class="time-song">
+                        <p>3:22</p>
+                    </div>
+                    <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="popular-music1" id="s14">
+                <div class="song">
+                    <i class="ti-music-alt ti-music-alt1"></i>
+                    <img src="acsset/img/V-POP/reallyloveu.jpg" alt="">
+                    <div class="name-song">
+                        <p>Really Love You</p>
+                    </div>
+                    <div class="view">
+                        <p>125.078.320</p>
+                    </div>
+                    <div class="time-song">
+                        <p>3:53</p>
+                    </div>
+                    <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="popular-music1" id="s15">
+                <div class="song">
+                    <i class="ti-music-alt ti-music-alt1"></i>
+                    <img src="acsset/img/V-POP/yeu5.jpg" alt="">
+                    <div class="name-song">
+                        <p>Yêu 5</p>
+                    </div>
+                    <div class="view">
+                        <p>266.078.320</p>
+                    </div>
+                    <div class="time-song">
+                        <p>4:23</p>
+                    </div>
+                    <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="popular-music1" id="s16">
+                <div class="song">
+                    <i class="ti-music-alt ti-music-alt1"></i>
+                    <img src="acsset/img/V-POP/tamsutuoi30.jpg" alt="">
+                    <div class="name-song">
+                        <p>Tâm sự tuổi 30</p>
+                    </div>
+                    <div class="view">
+                        <p>301.078.320</p>
+                    </div>
+                    <div class="time-song">
+                        <p>4:05</p>
+                    </div>
+                    <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="popular-music1" id="s41">
+                <div class="song">
+                    <i class="ti-music-alt ti-music-alt1"></i>
+                    <img src="acsset/img/V-POP/chungtakhongthuocvenhau.jpg" alt="">
+                    <div class="name-song">
+                        <p>Chúng ta không thuộc về nhau</p>
+                    </div>
+                    <div class="view">
+                        <p>125.078.320</p>
+                    </div>
+                    <div class="time-song">
+                        <p>3:53</p>
+                    </div>
+                    <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="popular-music1" id="s42">
+                <div class="song">
+                    <i class="ti-music-alt ti-music-alt1"></i>
+                    <img src="acsset/img/V-POP/khongphaidangvuadau.jpg" alt="">
+                    <div class="name-song">
+                        <p>Không phải dạng vừa đâu</p>
+                    </div>
+                    <div class="view">
+                        <p>266.078.320</p>
+                    </div>
+                    <div class="time-song">
+                        <p>4:23</p>
+                    </div>
+                    <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="popular-music1" id="s43">
+                <div class="song">
+                    <i class="ti-music-alt ti-music-alt1"></i>
+                    <img src="acsset/img/V-POP/haytraochoanh.jpg" alt="">
+                    <div class="name-song">
+                        <p>Hãy trao cho anh</p>
+                    </div>
+                    <div class="view">
+                        <p>301.078.320</p>
+                    </div>
+                    <div class="time-song">
+                        <p>4:05</p>
+                    </div>
+                    <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="popular-music1" id="s17">
+                <div class="song">
+                    <i class="ti-music-alt ti-music-alt1"></i>
+                    <img src="acsset/img/US-UK/wedonttalkanymore.jpg" alt="">
+                    <div class="name-song">
+                        <p>We don't talk any more</p>
+                    </div>
+                    <div class="view">
+                        <p>235.078.320</p>
+                    </div>
+                    <div class="time-song">
+                        <p>3:22</p>
+                    </div>
+                    <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="popular-music1" id="s18">
+                <div class="song">
+                    <i class="ti-music-alt ti-music-alt1"></i>
+                    <img src="acsset/img/US-UK/blankspace.jpg" alt="">
+                    <div class="name-song">
+                        <p>Blank Space</p>
+                    </div>
+                    <div class="view">
+                        <p>125.078.320</p>
+                    </div>
+                    <div class="time-song">
+                        <p>3:53</p>
+                    </div>
+                    <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="popular-music1" id="s19">
+                <div class="song">
+                    <i class="ti-music-alt ti-music-alt1"></i>
+                    <img src="acsset/img/US-UK/sugar.jpg" alt="">
+                    <div class="name-song">
+                        <p>Sugar</p>
+                    </div>
+                    <div class="view">
+                        <p>235.078.320</p>
+                    </div>
+                    <div class="time-song">
+                        <p>3:22</p>
+                    </div>
+                    <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="popular-music1" id="s20">
+                <div class="song">
+                    <i class="ti-music-alt ti-music-alt1"></i>
+                    <img src="acsset/img/US-UK/uptownfunk.jpg" alt="">
+                    <div class="name-song">
+                        <p>Uptown Funk</p>
+                    </div>
+                    <div class="view">
+                        <p>125.078.320</p>
+                    </div>
+                    <div class="time-song">
+                        <p>3:53</p>
+                    </div>
+                    <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="popular-music1" id="s21">
+                <div class="song">
+                    <i class="ti-music-alt ti-music-alt1"></i>
+                    <img src="acsset/img/US-UK/lethergo.jpg" alt="">
+                    <div class="name-song">
+                        <p>Let her go</p>
+                    </div>
+                    <div class="view">
+                        <p>266.078.320</p>
+                    </div>
+                    <div class="time-song">
+                        <p>4:23</p>
+                    </div>
+                    <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="popular-music1" id="s22">
+                <div class="song">
+                    <i class="ti-music-alt ti-music-alt1"></i>
+                    <img src="acsset/img/US-UK/havana.jpg" alt="">
+                    <div class="name-song">
+                        <p>Havana</p>
+                    </div>
+                    <div class="view">
+                        <p>301.078.320</p>
+                    </div>
+                    <div class="time-song">
+                        <p>4:05</p>
+                    </div>
+                    <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="popular-music1" id="s23">
+                <div class="song">
+                    <i class="ti-music-alt ti-music-alt1"></i>
+                    <img src="acsset/img/US-UK/baby.jpg" alt="">
+                    <div class="name-song">
+                        <p>Baby</p>
+                    </div>
+                    <div class="view">
+                        <p>235.078.320</p>
+                    </div>
+                    <div class="time-song">
+                        <p>3:22</p>
+                    </div>
+                    <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="popular-music1" id="s24">
+                <div class="song">
+                    <i class="ti-music-alt ti-music-alt1"></i>
+                    <img src="acsset/img/US-UK/fade.jpg" alt="">
+                    <div class="name-song">
+                        <p>Faded</p>
+                    </div>
+                    <div class="view">
+                        <p>125.078.320</p>
+                    </div>
+                    <div class="time-song">
+                        <p>3:53</p>
+                    </div>
+                    <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="popular-music1" id="s25">
+                <div class="song">
+                    <i class="ti-music-alt ti-music-alt1"></i>
+                    <img src="acsset/img/US-UK/waitingforlove.jpg" alt="">
+                    <div class="name-song">
+                        <p>Waitng for Love</p>
+                    </div>
+                    <div class="view">
+                        <p>266.078.320</p>
+                    </div>
+                    <div class="time-song">
+                        <p>4:23</p>
+                    </div>
+                    <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="popular-music1" id="s26">
+                <div class="song">
+                    <i class="ti-music-alt ti-music-alt1"></i>
+                    <img src="acsset/img/US-UK/atmyworst.jpg" alt="">
+                    <div class="name-song">
+                        <p>At my Worst</p>
+                    </div>
+                    <div class="view">
+                        <p>301.078.320</p>
+                    </div>
+                    <div class="time-song">
+                        <p>4:05</p>
+                    </div>
+                    <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="popular-music1" id="s27">
+                <div class="song">
+                    <i class="ti-music-alt ti-music-alt1"></i>
+                    <img src="acsset/img/US-UK/girllikeyou.jpg" alt="">
+                    <div class="name-song">
+                        <p>Girl Like You</p>
+                    </div>
+                    <div class="view">
+                        <p>235.078.320</p>
+                    </div>
+                    <div class="time-song">
+                        <p>3:22</p>
+                    </div>
+                    <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="popular-music1" id="s28">
+                <div class="song">
+                    <i class="ti-music-alt ti-music-alt1"></i>
+                    <img src="acsset/img/US-UK/closer.jpg" alt="">
+                    <div class="name-song">
+                        <p>Closer</p>
+                    </div>
+                    <div class="view">
+                        <p>125.078.320</p>
+                    </div>
+                    <div class="time-song">
+                        <p>3:53</p>
+                    </div>
+                    <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="popular-music1" id="s29">
+                <div class="song">
+                    <i class="ti-music-alt ti-music-alt1"></i>
+                    <img src="acsset/img/US-UK/thatgirl.jpg" alt="">
+                    <div class="name-song">
+                        <p>That girl</p>
+                    </div>
+                    <div class="view">
+                        <p>266.078.320</p>
+                    </div>
+                    <div class="time-song">
+                        <p>4:23</p>
+                    </div>
+                    <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="popular-music1" id="s30">
+                <div class="song">
+                    <i class="ti-music-alt ti-music-alt1"></i>
+                    <img src="acsset/img/US-UK/shapeofu.jpg" alt="">
+                    <div class="name-song">
+                        <p>Shape of you</p>
+                    </div>
+                    <div class="view">
+                        <p>301.078.320</p>
+                    </div>
+                    <div class="time-song">
+                        <p>4:05</p>
+                    </div>
+                    <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="popular-music1" id="s31">
+                <div class="song">
+                    <i class="ti-music-alt ti-music-alt1"></i>
+                    <img src="acsset/img/US-UK/seeyouagain.jpg" alt="">
+                    <div class="name-song">
+                        <p>See you again</p>
+                    </div>
+                    <div class="view">
+                        <p>235.078.320</p>
+                    </div>
+                    <div class="time-song">
+                        <p>3:22</p>
+                    </div>
+                    <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="popular-music1" id="s32">
+                <div class="song">
+                    <i class="ti-music-alt ti-music-alt1"></i>
+                    <img src="acsset/img/US-UK/ocean.jpg" alt="">
+                    <div class="name-song">
+                        <p>Ocean</p>
+                    </div>
+                    <div class="view">
+                        <p>125.078.320</p>
+                    </div>
+                    <div class="time-song">
+                        <p>3:53</p>
+                    </div>
+                    <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="popular-music1" id="s33">
+                <div class="song">
+                    <i class="ti-music-alt ti-music-alt1"></i>
+                    <img src="acsset/img/K - Pop & J - Pop/Flowers.png" alt="">
+                    <div class="name-song">
+                        <p>Flowers</p>
+                    </div>
+                    <div class="view">
+                        <p>266.078.320</p>
+                    </div>
+                    <div class="time-song">
+                        <p>4:23</p>
+                    </div>
+                    <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="popular-music1" id="s34">
+                <div class="song">
+                    <i class="ti-music-alt ti-music-alt1"></i>
+                    <img src="acsset/img/K - Pop & J - Pop/shutdown.jpg" alt="">
+                    <div class="name-song">
+                        <p>Shut down</p>
+                    </div>
+                    <div class="view">
+                        <p>301.078.320</p>
+                    </div>
+                    <div class="time-song">
+                        <p>4:05</p>
+                    </div>
+                    <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="popular-music1" id="s35">
+                <div class="song">
+                    <i class="ti-music-alt ti-music-alt1"></i>
+                    <img src="acsset/img/K - Pop & J - Pop/dynamite.jpg" alt="">
+                    <div class="name-song">
+                        <p>Dynamite</p>
+                    </div>
+                    <div class="view">
+                        <p>235.078.320</p>
+                    </div>
+                    <div class="time-song">
+                        <p>3:22</p>
+                    </div>
+                    <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="popular-music1" id="s36">
+                <div class="song">
+                    <i class="ti-music-alt ti-music-alt1"></i>
+                    <img src="acsset/img/K - Pop & J - Pop/tabun.jpg" alt="">
+                    <div class="name-song">
+                        <p>Tabun</p>
+                    </div>
+                    <div class="view">
+                        <p>125.078.320</p>
+                    </div>
+                    <div class="time-song">
+                        <p>3:53</p>
+                    </div>
+                    <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="popular-music1" id="s37">
+                <div class="song">
+                    <i class="ti-music-alt ti-music-alt1"></i>
+                    <img src="acsset/img/K - Pop & J - Pop/lemon.jpg" alt="">
+                    <div class="name-song">
+                        <p>Lemon</p>
+                    </div>
+                    <div class="view">
+                        <p>266.078.320</p>
+                    </div>
+                    <div class="time-song">
+                        <p>4:23</p>
+                    </div>
+                    <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="popular-music1" id="s38">
+                <div class="song">
+                    <i class="ti-music-alt ti-music-alt1"></i>
+                    <img src="acsset/img/K - Pop & J - Pop/gangnamstyle.jpg" alt="">
+                    <div class="name-song">
+                        <p>Gangnam style</p>
+                    </div>
+                    <div class="view">
+                        <p>301.078.320</p>
+                    </div>
+                    <div class="time-song">
+                        <p>4:05</p>
+                    </div>
+                    <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="popular-music1" id="s39">
+                <div class="song">
+                    <i class="ti-music-alt ti-music-alt1"></i>
+                    <img src="acsset/img/K - Pop & J - Pop/sakura anata deaete yokatta.jpg" alt="">
+                    <div class="name-song">
+                        <p>Sakura anata deaete yokatta</p>
+                    </div>
+                    <div class="view">
+                        <p>235.078.320</p>
+                    </div>
+                    <div class="time-song">
+                        <p>3:22</p>
+                    </div>
+                    <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="popular-music1" id="s40">
+                <div class="song">
+                    <i class="ti-music-alt ti-music-alt1"></i>
+                    <img src="acsset/img/K - Pop & J - Pop/shinunoga.jpg" alt="">
+                    <div class="name-song">
+                        <p>Shinunoga E-Wa</p>
+                    </div>
+                    <div class="view">
+                        <p>125.078.320</p>
+                    </div>
+                    <div class="time-song">
+                        <p>3:53</p>
+                    </div>
+                    <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popular-music1" id="s44">
+            <div class="song">
+                <i class="ti-music-alt ti-music-alt1"></i>
+                <img src="acsset/img/New realese/makingmyway.png" alt="">
+                <div class="name-song">
+                    <p>Making My Way</p>
+                </div>
+                <div class="view">
+                    <p>18.763.002</p>
+                </div>
+                <div class="time-song">
+                    <p>3:25</p>
+                </div>
+                 <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i></div>
+            </div>
+        </div>
+        <div class="popular-music1" id="s45">
+            <div class="song">
+                <i class="ti-music-alt ti-music-alt1"></i>
+                <img src="acsset/img/New realese/motngaychangnang.png" alt="">
+                <div class="name-song">
+                    <p>Một Ngày Chẳng Nắng</p>
+                </div>
+                <div class="view">
+                    <p>10.000.000</p>
+                </div>
+                <div class="time-song">
+                    <p>5:50</p>
+                </div>
+                 <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i></div>
+            </div>
+        </div>
+        <div class="popular-music1" id="s46">
+            <div class="song">
+                <i class="ti-music-alt ti-music-alt1"></i>
+                <img src="acsset/img/New realese/nauanchoem.png" alt="">
+                <div class="name-song">
+                    <p>Nấu ăn cho em</p>
+                </div>
+                <div class="view">
+                    <p>125.078.320</p>
+                </div>
+                <div class="time-song">
+                    <p>3:53</p>
+                </div>
+                 <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i></div>
+            </div>
+        </div>
+
+        <div class="popular-music1" id="s47">
+            <div class="song">
+                <i class="ti-music-alt ti-music-alt1"></i>
+                <img src="acsset/img/New realese/vutrucoanh.png" alt="">
+                <div class="name-song">
+                    <p>Vũ trụ có anh</p>
+                </div>
+                <div class="view">
+                    <p>50.982.390</p>
+                </div>
+                <div class="time-song">
+                    <p>4:12</p>
+                </div>
+                 <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i></div>
+            </div>
+        </div>
+
+        <div class="popular-music1" id="s48">
+            <div class="song">
+                <i class="ti-music-alt ti-music-alt1"></i>
+                <img src="acsset/img/New realese/fallinlovealone.png" alt="">
+                <div class="name-song">
+                    <p>Fall in love Alone</p>
+                </div>
+                <div class="view">
+                    <p>207.384.710</p>
+                </div>
+                <div class="time-song">
+                    <p>4:49</p>
+                </div>
+                 <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i></div>
+            </div>
+        </div>
+
+        <div class="popular-music1" id="s49">
+            <div class="song">
+                <i class="ti-music-alt ti-music-alt1"></i>
+                <img src="acsset/img/New realese/chamganthemthuong.png" alt="">
+                <div class="name-song">
+                    <p>Chạm gần thêm thương</p>
+                </div>
+                <div class="view">
+                    <p>18.763.002</p>
+                </div>
+                <div class="time-song">
+                    <p>3:25</p>
+                </div>
+                 <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i></div>
+            </div>
+        </div>
+        <div class="popular-music1" id="s50">
+            <div class="song">
+                <i class="ti-music-alt ti-music-alt1"></i>
+                <img src="acsset/img/New realese/herewithme.png" alt="">
+                <div class="name-song">
+                    <p>Herw with me</p>
+                </div>
+                <div class="view">
+                    <p>125.078.320</p>
+                </div>
+                <div class="time-song">
+                    <p>3:53</p>
+                </div>
+                 <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i></div>
+            </div>
+        </div>
+
+        <div class="popular-music1" id="s51">
+            <div class="song">
+                <i class="ti-music-alt ti-music-alt1"></i>
+                <img src="acsset/img/New realese/overdose.png" alt="">
+                <div class="name-song">
+                    <p>Overdose</p>
+                </div>
+                <div class="view">
+                    <p>50.982.390</p>
+                </div>
+                <div class="time-song">
+                    <p>4:12</p>
+                </div>
+                 <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i></div>
+            </div>
+        </div>
+
+        <div class="popular-music1" id="s52">
+            <div class="song">
+                <i class="ti-music-alt ti-music-alt1"></i>
+                <img src="acsset/img/Speedup/attention.png" alt="">
+                <div class="name-song">
+                    <p>Attention(SpeedUp)</p>
+                </div>
+                <div class="view">
+                    <p>207.384.710</p>
+                </div>
+                <div class="time-song">
+                    <p>4:49</p>
+                </div>
+                 <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i></div>
+            </div>
+        </div>
+
+        <div class="popular-music1" id="s53">
+            <div class="song">
+                <i class="ti-music-alt ti-music-alt1"></i>
+                <img src="acsset/img/Speedup/colide.png" alt="">
+                <div class="name-song">
+                    <p>Collide(SpeedUp)</p>
+                </div>
+                <div class="view">
+                    <p>18.763.002</p>
+                </div>
+                <div class="time-song">
+                    <p>3:25</p>
+                </div>
+                 <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i></div>
+            </div>
+        </div>
+        <div class="popular-music1" id="s54">
+            <div class="song">
+                <i class="ti-music-alt ti-music-alt1"></i>
+                <img src="acsset/img/Speedup/Shakeitoff.png" alt="">
+                <div class="name-song">
+                    <p>Shake it off(SpeedUp)</p>
+                </div>
+                <div class="view">
+                    <p>12.345.678</p>
+                </div>
+                <div class="time-song">
+                    <p>4:02</p>
+                </div>
+                 <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i></div>
+            </div>
+        </div>
+        <div class="popular-music1" id="s55">
+            <div class="song">
+                <i class="ti-music-alt ti-music-alt1"></i>
+                <img src="acsset/img/Speedup/giveittome.png" alt="">
+                <div class="name-song">
+                    <p>Give it to me</p>
+                </div>
+                <div class="view">
+                    <p>9.876.543</p>
+                </div>
+                <div class="time-song">
+                    <p>3:49</p>
+                </div>
+                 <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i></div>
+            </div>
+        </div>
+        <div class="popular-music1" id="s56">
+            <div class="song">
+                <i class="ti-music-alt ti-music-alt1"></i>
+                <img src="acsset/img/Speedup/callmemaybe.png" alt="">
+                <div class="name-song">
+                    <p>Call me maybe</p>
+                </div>
+                <div class="view">
+                    <p>15.432.109</p>
+                </div>
+                <div class="time-song">
+                    <p>3:20</p>
+                </div>
+                 <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i></div>
+            </div>
+        </div>
+        <div class="popular-music1" id="s57">
+            <div class="song">
+                <i class="ti-music-alt ti-music-alt1"></i>
+                <img src="acsset/img/Speedup/caphe.png" alt="">
+                <div class="name-song">
+                    <p>Cà phê(SpeedUp)</p>
+                </div>
+                <div class="view">
+                    <p>7.654.321</p>
+                </div>
+                <div class="time-song">
+                    <p>4:32</p>
+                </div>
+                 <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i></div>
+            </div>
+        </div>
+        <div class="popular-music1" id="s58">
+            <div class="song">
+                <i class="ti-music-alt ti-music-alt1"></i>
+                <img src="acsset/img/Speedup/baby.png" alt="">
+                <div class="name-song">
+                    <p>Baby(SpeedUp)</p>
+                </div>
+                <div class="view">
+                    <p>5.678.912</p>
+                </div>
+                <div class="time-song">
+                    <p>3:55</p>
+                </div>
+                 <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i></div>
+            </div>
+        </div>
+        <div class="popular-music1" id="s59">
+            <div class="song">
+                <i class="ti-music-alt ti-music-alt1"></i>
+                <img src="acsset/img/Speedup/happier.png" alt="">
+                <div class="name-song">
+                    <p>Happier</p>
+                </div>
+                <div class="view">
+                    <p>20.202.020</p>
+                </div>
+                <div class="time-song">
+                    <p>3:34</p>
+                </div>
+                 <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i></div>
+            </div>
+        </div>
+        <div class="popular-music1" id="s60">
+            <div class="song">
+                <i class="ti-music-alt ti-music-alt1"></i>
+                <img src="acsset/img/Speedup/cupid.png" alt="">
+                <div class="name-song">
+                    <p>Cupid(SpeedUp)</p>
+                </div>
+                <div class="view">
+                    <p>3.456.789</p>
+                </div>
+                <div class="time-song">
+                    <p>3:12</p>
+                </div>
+                 <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i></div>
+            </div>
+        </div>
+        <div class="popular-music1" id="s61">
+            <div class="song">
+                <i class="ti-music-alt ti-music-alt1"></i>
+                <img src="acsset/img/Speedup/pano.png" alt="">
+                <div class="name-song">
+                    <p>Pano(Speedup)</p>
+                </div>
+                <div class="view">
+                    <p>2.345.678</p>
+                </div>
+                <div class="time-song">
+                    <p>4:10</p>
+                </div>
+                 <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i></div>
+            </div>
+        </div>
+        <div class="popular-music1" id="s62">
+            <div class="song">
+                <i class="ti-music-alt ti-music-alt1"></i>
+                <img src="acsset/img/Speedup/howlong.png" alt="">
+                <div class="name-song">
+                    <p>How long(SpeedUp)</p>
+                </div>
+                <div class="view">
+                    <p>6.543.210</p>
+                </div>
+                <div class="time-song">
+                    <p>3:16</p>
+                </div>
+                 <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i></div>
+            </div>
+        </div>
+        <div class="popular-music1" id="s63">
+            <div class="song">
+                <i class="ti-music-alt ti-music-alt1"></i>
+                <img src="acsset/img/Speedup/seetinh.png" alt="">
+                <div class="name-song">
+                    <p>See tình(SpeedUp)</p>
+                </div>
+                <div class="view">
+                    <p>4.567.890</p>
+                </div>
+                <div class="time-song">
+                    <p>3:09</p>
+                </div>
+                 <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i></div>
+            </div>
+        </div>
+        <div class="popular-music1" id="s64">
+            <div class="song">
+                <i class="ti-music-alt ti-music-alt1"></i>
+                <img src="acsset/img/Speedup/undertheinfluence.png" alt="">
+                <div class="name-song">
+                    <p>Under Thein Fluence</p>
+                </div>
+                <div class="view">
+                    <p>8.765.432</p>
+                </div>
+                <div class="time-song">
+                    <p>3:52</p>
+                </div>
+                 <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i></div>
+            </div>
+        </div>
+        <div class="popular-music1" id="s65">
+            <div class="song">
+                <i class="ti-music-alt ti-music-alt1"></i>
+                <img src="acsset/img/Speedup/levitating.png" alt="">
+                <div class="name-song">
+                    <p>Levitating</p>
+                </div>
+                <div class="view">
+                    <p>23.456.789</p>
+                </div>
+                <div class="time-song">
+                    <p>3:23</p>
+                </div>
+                 <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i></div>
+            </div>
+        </div>
+        <div class="popular-music1" id="s66">
+            <div class="song">
+                <i class="ti-music-alt ti-music-alt1"></i>
+                <img src="acsset/img/Speedup/thatwasilike.png" alt="">
+                <div class="name-song">
+                    <p>That was I like</p>
+                </div>
+                <div class="view">
+                    <p>10.101.010</p>
+                </div>
+                <div class="time-song">
+                    <p>3:17</p>
+                </div>
+                 <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i></div>
+            </div>
+        </div>
+        <div class="popular-music1" id="s67">
+            <div class="song">
+                <i class="ti-music-alt ti-music-alt1"></i>
+                <img src="acsset/img/Speedup/again.png" alt="">
+                <div class="name-song">
+                    <p>Again</p>
+                </div>
+                <div class="view">
+                    <p>7.557.123</p>
+                </div>
+                <div class="time-song">
+                    <p>3:46</p>
+                </div>
+                 <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i></div>
+            </div>
+        </div>
+
+        <div class="popular-music1" id="s68">
+            <div class="song">
+                <i class="ti-music-alt ti-music-alt1"></i>
+                <img src="acsset/img/C-Pop/caithuoc.png" alt="">
+                <div class="name-song">
+                    <p>Cai thuốc</p>
+                </div>
+                <div class="view">
+                    <p>3.674.912</p>
+                </div>
+                <div class="time-song">
+                    <p>4:14</p>
+                </div>
+                 <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i></div>
+            </div>
+        </div>
+
+        <div class="popular-music1" id="s69">
+            <div class="song">
+                <i class="ti-music-alt ti-music-alt1"></i>
+                <img src="acsset/img/C-Pop/batvanbietly.png" alt="">
+                <div class="name-song">
+                    <p>Bất vấn biệt ly</p>
+                </div>
+                <div class="view">
+                    <p>8.221.543</p>
+                </div>
+                <div class="time-song">
+                    <p>5:08</p>
+                </div>
+                 <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i></div>
+            </div>
+        </div>
+
+        <div class="popular-music1" id="s70">
+            <div class="song">
+                <i class="ti-music-alt ti-music-alt1"></i>
+                <img src="acsset/img/C-Pop/datu.png" alt="">
+                <div class="name-song">
+                    <p>Dã Tử</p>
+                </div>
+                <div class="view">
+                    <p>6.123.456</p>
+                </div>
+                <div class="time-song">
+                    <p>4:22</p>
+                </div>
+                 <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i></div>
+            </div>
+        </div>
+
+        <div class="popular-music1" id="s71">
+            <div class="song">
+                <i class="ti-music-alt ti-music-alt1"></i>
+                <img src="acsset/img/C-Pop/doituu.png" alt="">
+                <div class="name-song">
+                    <p>Đối Tửu</p>
+                </div>
+                <div class="view">
+                    <p>2.345.987</p>
+                </div>
+                <div class="time-song">
+                    <p>3:58</p>
+                </div>
+                 <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i></div>
+            </div>
+        </div>
+        <div class="popular-music1" id="s72">
+            <div class="song">
+                <i class="ti-music-alt ti-music-alt1"></i>
+                <img src="acsset/img/C-Pop/ga.png" alt="">
+                <div class="name-song">
+                    <p>Gả</p>
+                </div>
+                <div class="view">
+                    <p>1.234.567</p>
+                </div>
+                <div class="time-song">
+                    <p>4:12</p>
+                </div>
+                 <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i></div>
+            </div>
+        </div>
+
+        <div class="popular-music1" id="s73">
+            <div class="song">
+                <i class="ti-music-alt ti-music-alt1"></i>
+                <img src="acsset/img/C-Pop/hason.png" alt="">
+                <div class="name-song">
+                    <p>Hạ Sơn</p>
+                </div>
+                <div class="view">
+                    <p>3.456.789</p>
+                </div>
+                <div class="time-song">
+                    <p>5:24</p>
+                </div>
+                 <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i></div>
+            </div>
+        </div>
+
+        <div class="popular-music1" id="s74">
+            <div class="song">
+                <i class="ti-music-alt ti-music-alt1"></i>
+                <img src="acsset/img/C-Pop/thanhtru.png" alt="">
+                <div class="name-song">
+                    <p>Thanh Trừ</p>
+                </div>
+                <div class="view">
+                    <p>2.345.678</p>
+                </div>
+                <div class="time-song">
+                    <p>4:56</p>
+                </div>
+                 <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i></div>
+            </div>
+        </div>
+
+        <div class="popular-music1" id="s75">
+            <div class="song">
+                <i class="ti-music-alt ti-music-alt1"></i>
+                <img src="acsset/img/C-Pop/giaycaogotmaudo.png" alt="">
+                <div class="name-song">
+                    <p>Giày Cao Gót Màu Đỏ</p>
+                </div>
+                <div class="view">
+                    <p>5.678.901</p>
+                </div>
+                <div class="time-song">
+                    <p>3:37</p>
+                </div>
+                 <div class="like"><i class="ti-plus" id="ti-plus" style="font-size: 120%;color: aliceblue;"></i></div>
+            </div>
+        </div>
+        <div class="music-player">
+            <div id="player">
+                <div id="mp3-layer">
+                    <img class="musicwave" src="acsset/img/Musicwave.gif" alt="">
+                    <img src="acsset/img/V-POP/chungtacuahientai.jpg" alt="" class="anh-tieu-de" id="anh-tieu-de">
+                    <h3 class="tieu-de" id="tieude">Chúng ta của hiện tại</h2>
+                        <p id="tacgia">Sơn Tùng MTP</p>
+                </div>
+                <div id="mp3-layer1">
+                    <div id="mp3-layer1-2">
+                        <button id="previous"><i class="ti-control-skip-backward"></i></button>
+                        <button id="backward-btn"><i class="ti-control-backward"></i></button>
+                        <button id="play-button"><i id="play-pause-img" class="ti-control-pause"></i></button>
+                        <button id="foward-btn"><i class="ti-control-forward"></i></button>
+                        <button id="next"><i class="ti-control-skip-forward"></i></button>
+                        <i class="ti-heart repon-heart" id="ti-heart" style="font-size: 100%; margin-right: 40px;"></i>
+                    </div>
+                    <div id="mp3-layer1-3">
+                        <div id="progress-bar-container">
+                            <div id="progress-bar">
+                                <div></div><span id="time-display"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="mp3-layer2">
+                    <i class="ti-heart" id="ti-heart1"></i>
+                    <label for="speed-input" style="color: white;">Tốc độ:</label>
+                    <select name="speed-input" id="speed-input" placeholder="speed">
+                        <option value="1">1</option>
+                        <option value="0.5">0,5</option>
+                        <option value="0.75">0,75</option>
+                        <option value="1.25">1,25</option>
+                        <option value="1.5">1,5</option>
+                        <option value="2">2</option>
+                    </select>
+                    <br>
+                    <label id="" for="volume-slider" style="color: white;"><i class="ti-volume"></i> </label>
+                    <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="1">
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

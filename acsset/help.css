@@ -1,0 +1,49 @@
+.helpmain{
+    background: url('img/giphy.gif');
+    background-repeat: cover;
+    background-size: contain;
+    height: 930px;
+}  
+.helptitle{
+    margin-top: 60px;
+    margin-left: 80px;
+    color: aliceblue;
+    font-size: 250%;
+}
+.contactimg video{
+    height: 500px; ;
+}
+.contact{
+    display: flex;
+    margin-right:77%;
+    width: 500px;
+}
+.support{
+    display: grid;
+    align-items: center;
+    margin-left: 40%;
+}.support select{
+    height: 30px;
+    border-radius: 10px;
+}
+#name, #email{
+    height: 36px;
+    border-radius: 10px;
+    border: none;
+}
+.support label{
+    color: aliceblue;
+}
+#help-content{
+    height: 160px;
+    width: 500px;
+    border-radius: 5px;
+    padding: 5px;
+}
+.submit{
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    margin-left: 38%;
+    margin-top: 20px;
+}
